@@ -1,0 +1,1 @@
+console.log(require('fs').readFileSync('input', 'utf8').split('\n').reduce((r,v) =>(v.match(/[aeiou]/g) || []).length > 2 && /(.)\1/g.test(v) && !/ab|cd|pq|xy/g.test(v) ? r+1 : r, 0))
